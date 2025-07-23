@@ -1,0 +1,30 @@
+.hero-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.hero-container .heading {
+  margin-top: 2rem;
+  width: 35%;
+}
+.hero-container .heading h2 {
+  font-size: 3rem;
+}
+.hero-container .heading p {
+  margin-top: -1rem;
+  font-size: 1.1rem;
+}
+.hero-container button {
+  height: 35px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 5px;
+  padding-top: 4px;
+  cursor: pointer;
+  background-color: #0c77f2;
+}
+.hero-container .btn {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
