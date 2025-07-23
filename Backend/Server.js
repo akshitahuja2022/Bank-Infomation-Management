@@ -22,6 +22,13 @@ app.use(
 app.use("/auth", router);
 app.use("/bank", bankRouter);
 
+app.get("/", (req, res) => {
+  res.send({
+    activeStatus: true,
+    error: false,
+  });
+});
+
 app.get("/getAccounts", async (req, res) => {
   const accounts = await BankModel.find();
   res.json(accounts);
