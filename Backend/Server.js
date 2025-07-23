@@ -5,6 +5,8 @@ import cors from "cors";
 import router from "./Router/authRouter.js";
 import bankRouter from "./Router/bankRouter.js";
 import BankModel from "./Models/BankSchema.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 
@@ -36,9 +38,9 @@ app.get("/getAccounts", async (req, res) => {
 
 // connect with monggose db
 mongoose
-  .connect("mongodb://localhost:27017/bank-info-db")
-  .then(() => console.log("Connect Db Successfully"))
-  .catch((error) => console.error(error));
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("Connected to DB"))
+  .catch((err) => console.error(err));
 
 app.listen(4000, (req, res) => {
   console.log("Server is runnning on 4000 port ");
