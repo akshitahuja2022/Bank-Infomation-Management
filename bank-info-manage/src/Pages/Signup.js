@@ -13,13 +13,16 @@ function Signup() {
       email: user.email,
       password: user.password,
     };
-
+    // http://localhost:4000/auth/signup
     try {
-      const response = await fetch("http://localhost:4000/auth/signup", {
-        method: "POST",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        "https://bank-infomation-management.vercel.app/auth/singup",
+        {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
       const result = await response.json();
       const { message, success, error } = result;
       if (success) {

@@ -17,11 +17,14 @@ function Login() {
     };
 
     try {
-      const response = await fetch("http://localhost:4000/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        "https://bank-infomation-management.vercel.app/auth/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
       const { message, success, error } = await response.json();
       if (success) {
         setIsLogin(true);
