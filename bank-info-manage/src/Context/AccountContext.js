@@ -15,7 +15,7 @@ export const AccountProvider = ({ children }) => {
     const fetchAccounts = async () => {
       try {
         const res = await fetch(
-          `http://localhost:4000/bank/accounts?email=${encodeURIComponent(
+          `https://bank-infomation-management.vercel.app/bank/accounts?email=${encodeURIComponent(
             user.email
           )}`
         );

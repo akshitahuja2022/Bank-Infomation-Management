@@ -16,7 +16,7 @@ function Signup() {
     // http://localhost:4000/auth/signup
     try {
       const response = await fetch(
-        "https://bank-infomation-management.vercel.app/auth/singup",
+        "https://bank-infomation-management.vercel.app/auth/signup",
         {
           method: "POST",
           headers: { "Content-type": "application/json" },

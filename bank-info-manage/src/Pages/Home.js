@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
       <Hero />
-      {/* {islogin ? null : <AdminPannel />} */}
+
       {isLogin ? null : <AdminPannel />}
     </div>
   );

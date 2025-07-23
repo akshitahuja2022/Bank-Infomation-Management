@@ -21,11 +21,14 @@ function Account() {
     const payload = { ...newAccount, email: user.email };
 
     try {
-      const response = await fetch("http://localhost:4000/bank/add", {
-        method: "POST",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        "https://bank-infomation-management.vercel.app/bank/add",
+        {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
       const result = await response.json();
       const { message, success, error } = result;
       if (success) {

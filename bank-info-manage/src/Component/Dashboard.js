@@ -24,7 +24,7 @@ function Dashboard() {
 
     try {
       const res = await fetch(
-        `http://localhost:4000/bank/account/${selectedAccount._id}`,
+        `https://bank-infomation-management.vercel.app/bank/account/${selectedAccount._id}`,
         {
           method: "DELETE",
           headers: {

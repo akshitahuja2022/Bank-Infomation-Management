@@ -10,7 +10,9 @@ function AdminPannel() {
   }, []);
 
   const fetchAccounts = async () => {
-    const response = await fetch("http://localhost:4000/getAccounts");
+    const response = await fetch(
+      "https://bank-infomation-management.vercel.app/getAccounts"
+    );
     const data = await response.json();
     setAccounts(data);
   };

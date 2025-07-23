@@ -39,13 +39,16 @@ function EditAccount() {
 
     try {
       const { _id, ...formWithoutId } = formData;
-      const res = await fetch(`http://localhost:4000/bank/edit/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formWithoutId),
-      });
+      const res = await fetch(
+        `https://bank-infomation-management.vercel.app/bank/edit/${id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formWithoutId),
+        }
+      );
 
       const result = await res.json();
       console.log("Update result:", result);
